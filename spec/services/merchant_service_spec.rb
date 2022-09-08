@@ -9,6 +9,7 @@ RSpec.describe 'MerchantService' do
 
     merchant_1 = parsed_json[:data][0]
 
+    expect(merchant_1[:id]).to be_a String
     expect(merchant_1[:attributes][:name]).to be_a String 
   end
 end
