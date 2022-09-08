@@ -19,5 +19,18 @@ RSpec.describe 'Merchants', type: :feature do
   # and when I click the merchant's name
   # I should be on page '/merchants/:id'
   # And I should see a list of items that merchant sells.
+  it 'has links to Merchant show page' do 
+    visit '/merchants' 
 
+    click_link 'Schroeder-Jerde'
+
+    expect(current_path).to eq "/merchants/1"
+
+    items_list = Array.new 
+    items_list = find('#parent').all('li')
+    expect(items_list.size).to eq 15
+    expect(page).to have_content 'Item Nemo Facere'
+    expect(page).to have_content 'Item Expedita Fuga'
+    expect(page).to have_content 'Item Voluptatem Sint'
+  end
 end
