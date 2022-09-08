@@ -8,7 +8,7 @@ RSpec.describe 'Merchants', type: :feature do
     visit '/merchants' 
 
     list = Array.new 
-    list = find('#parent ul').all('li')
+    list = find('#parent').all('li')
     expect(list.size).to eq 100 
 
     expect(page).to have_content 'Schroeder-Jerde'
