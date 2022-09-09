@@ -18,7 +18,7 @@ RSpec.describe 'MerchantService' do
 
     expect(parsed_json).to be_a Hash 
     expect(parsed_json[:data]).to be_a Hash
-    expect(parsed_json[:data][:id]).to eq 1
+    expect(parsed_json[:data][:id]).to eq "1"
     expect(parsed_json[:data][:name]).to eq "Schroeder-Jerde"
   end
 end

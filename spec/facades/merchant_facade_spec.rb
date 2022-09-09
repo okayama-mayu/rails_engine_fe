@@ -11,7 +11,6 @@ RSpec.describe 'MerchantFacade' do
   it 'returns a single Merchant object' do 
     merchant = MerchantFacade.merchant(1)
 
-    expect(merchant[:id]).to eq 1 
-    expect(merchant[:attributes][:name]).to eq "Schroeder-Jerde"
+    expect(merchant).to be_instance_of Merchant
   end
 end

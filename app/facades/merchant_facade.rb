@@ -7,8 +7,7 @@ class MerchantFacade
   end
   
   def self.merchant(id)
-    json = MerchantService.singe_merchant(id)
+    json = MerchantService.single_merchant(id)
     Merchant.new(json[:data])
-    binding.pry 
   end
 end
