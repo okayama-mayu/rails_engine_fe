@@ -12,4 +12,13 @@ RSpec.describe 'MerchantService' do
     expect(merchant_1[:id]).to be_a String
     expect(merchant_1[:attributes][:name]).to be_a String 
   end
+
+  it 'retrieves the data of a single Merchant given id' do 
+    parsed_json = MerchantService.single_merchant(1)
+
+    expect(parsed_json).to be_a Hash 
+    expect(parsed_json[:data]).to be_a Hash
+    expect(parsed_json[:data][:id]).to eq 1
+    expect(parsed_json[:data][:name]).to eq "Schroeder-Jerde"
+  end
 end
