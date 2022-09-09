@@ -5,4 +5,7 @@ class MerchantFacade
       Merchant.new(merchant_data)
     end
   end
+  
+  def self.merchant(id)
+  end
 end

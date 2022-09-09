@@ -7,4 +7,11 @@ RSpec.describe 'MerchantFacade' do
     expect(merchants).to be_an Array 
     expect(merchants).to be_all Merchant 
   end
+
+  it 'returns a single Merchant object' do 
+    merchant = MerchantFacade.merchant(1)
+
+    expect(merchant[:id]).to eq 1 
+    expect(merchant[:attributes][:name]).to eq "Schroeder-Jerde"
+  end
 end
