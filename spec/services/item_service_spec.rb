@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'ItemService' do 
   it 'retrieves Item data and parases response' do 
-    parsed_json = ItemService.item_data
+    parsed_json = ItemService.items_data(1)
 
     expect(parsed_json).to be_a Hash 
     expect(parsed_json[:data]).to be_an Array 
