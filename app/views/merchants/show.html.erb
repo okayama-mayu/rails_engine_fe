@@ -1,7 +1,8 @@
-<h1><%= @merchant %></h1>
+<h1><%= @merchant.name %></h1>
 
 <ul id='parent'>
   <% @items.each do |item| %>
+    <%binding.pry %>
     <li><%= item.name %></li>
   <% end %>
 </ul>

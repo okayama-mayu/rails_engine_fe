@@ -4,7 +4,7 @@ class MerchantsController < ApplicationController
   end
 
   def show 
-    @merchant = MerchantFacade.merchant 
+    @merchant = MerchantFacade.merchant(params[:id]) 
     @items = ItemFacade.items(params[:id])
   end
 end

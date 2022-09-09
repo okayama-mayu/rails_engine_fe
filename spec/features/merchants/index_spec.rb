@@ -23,6 +23,7 @@ RSpec.describe 'Merchants', type: :feature do
     visit '/merchants' 
 
     click_link 'Schroeder-Jerde'
+    save_and_open_page
 
     expect(current_path).to eq "/merchants/1"
 
